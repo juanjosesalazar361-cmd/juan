@@ -1,0 +1,168 @@
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(#020024,#000000);
+overflow:hidden;
+font-family:Arial;
+color:white;
+text-align:center;
+}
+
+/* mensaje */
+
+.mensaje{
+position:absolute;
+top:40px;
+width:100%;
+font-size:40px;
+color:#7ee7ff;
+text-shadow:0 0 15px #7ee7ff;
+animation:flotar 4s infinite ease-in-out;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+/* flores */
+
+.garden{
+position:absolute;
+bottom:0;
+width:100%;
+display:flex;
+justify-content:center;
+gap:120px;
+}
+
+.flower{
+position:relative;
+animation:mover 4s infinite ease-in-out;
+}
+
+@keyframes mover{
+0%{transform:rotate(0deg)}
+50%{transform:rotate(2deg)}
+100%{transform:rotate(0deg)}
+}
+
+.stem{
+width:6px;
+height:120px;
+background:#1ea36d;
+margin:auto;
+}
+
+.petals{
+position:absolute;
+top:-25px;
+left:-25px;
+width:60px;
+height:60px;
+}
+
+.petals span{
+position:absolute;
+width:35px;
+height:35px;
+background:#6fe8ff;
+border-radius:50%;
+box-shadow:0 0 15px #6fe8ff;
+}
+
+.petals span:nth-child(1){top:0;left:12px;}
+.petals span:nth-child(2){left:0;top:15px;}
+.petals span:nth-child(3){right:0;top:15px;}
+.petals span:nth-child(4){bottom:0;left:12px;}
+
+.center{
+width:18px;
+height:18px;
+background:#fff8a6;
+border-radius:50%;
+position:absolute;
+top:-2px;
+left:-6px;
+box-shadow:0 0 10px #fff8a6;
+}
+
+/* estrellas */
+
+.star{
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+cursor:pointer;
+box-shadow:0 0 8px white;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.3}
+to{opacity:1}
+}
+
+/* petalos */
+
+.petalo{
+position:absolute;
+color:#6fe8ff;
+font-size:18px;
+animation:caer 6s linear infinite;
+}
+
+@keyframes caer{
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(100vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* corazones */
+
+.corazon{
+position:absolute;
+font-size:20px;
+color:#4fc3ff;
+animation:caerCorazon linear forwards;
+pointer-events:none;
+text-shadow:0 0 10px #4fc3ff;
+}
+
+@keyframes caerCorazon{
+0%{
+transform:translateY(-50px) scale(1);
+opacity:1;
+}
+100%{
+transform:translateY(100vh) scale(1.2);
+opacity:1;
+}
+}
+
+.explosion{
+position:absolute;
+font-size:80px;
+color:#4fc3ff;
+animation:explosion 1s ease-out forwards;
+text-shadow:0 0 20px #4fc3ff;
+}
+
+@keyframes explosion{
+0%{
+transform:scale(0.2);
+opacity:1;
+}
+100%{
+transform:scale(1.5);
+opacity:0;
+}
+}
